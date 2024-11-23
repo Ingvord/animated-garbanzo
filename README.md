@@ -66,6 +66,8 @@ With Cache:
 
 ![](assets/cache_250K_records.png)
 
+![](assets/cach_computaion.png)
+
 Dramatic reduction in latency for all dataset sizes.
 
 Near-linear scaling for RPS up to 500 for datasets of 1,000 and 10,000 records.
