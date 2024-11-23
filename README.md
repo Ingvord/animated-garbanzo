@@ -118,13 +118,7 @@ The role of caching in reducing high-latency tail events.
 
 ## Conclusion
 
-This research underscores the importance of caching for read-heavy workloads, especially when dealing with large datasets. While caching significantly improves performance, the time cost of precomputing the cache for large datasets must be accounted for in deployment strategies. Future work could involve:
-
-Investigating distributed cache solutions.
-
-Analyzing write-heavy workloads.
-
-Comparing performance with alternative backend frameworks (e.g., Rust, Go, Python).
+This research underscores the importance of caching for read-heavy workloads, especially when dealing with large datasets. While caching significantly improves performance, the time cost of precomputing the cache for large datasets must be accounted for in deployment strategies. 
 
 ## Repository
 
