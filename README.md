@@ -21,7 +21,7 @@ Environment:
 * Testing Tool: wrk, a modern HTTP benchmarking tool.
 * VM:
 
-  ![](assets/Screenshot_20241123_042708.png)
+  ![](assets/Screenshot_20241123_183021.png)
 
 Scenarios:
 
