@@ -1,5 +1,5 @@
 #mongo
-docker run -d -p 27017:27017 --network root_elastic --name mongo mongodb/mongodb-community-server
+docker run -d -p 27017:27017 -v `pwd`/mongod.conf:/etc/mongod.conf:ro --network root_elastic --name mongo mongodb/mongodb-community-server --config /etc/mongod.conf
 #mongo-exporter
 docker run -d \
   -p 9216:9216 \
