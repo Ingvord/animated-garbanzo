@@ -27,7 +27,7 @@ Scenarios:
 
 Tested against datasets with 1,000, 10,000, 100,000, and 250,000 records.
 
-Fixed number of metadata fields: 100.
+Number of metadata fields: 100 and 1000.
 
 Requests Per Second (RPS): 100, 500, 1,000.
 
@@ -62,6 +62,8 @@ Basically the application is not usefull.
 With Cache:
 
 ![](assets/cache_1K_records.png)
+
+![](assets/cache_1K_meta_1K_records.png)
 
 ![](assets/cache_10K_records.png)
 
