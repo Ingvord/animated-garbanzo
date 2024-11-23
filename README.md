@@ -96,7 +96,7 @@ This section displays the distribution of time spent by the application in proce
 
 
 
-Key Observations:
+## Key Observations:
 
 For smaller datasets (1,000 and 10,000 records), latency remained low across all percentiles even at high RPS.
 
@@ -104,7 +104,7 @@ Larger datasets (100,000 and 250,000 records) exhibited latency spikes at high R
 
 Caching effectively masked database query latency but was limited by the precomputation overhead for very large datasets.
 
-Visualizations
+## Visualizations
 
 To aid analysis, latency percentiles (50th, 75th, 90th, and 99th) were plotted against RPS for each dataset size, highlighting:
 
@@ -122,11 +122,11 @@ Analyzing write-heavy workloads.
 
 Comparing performance with alternative backend frameworks (e.g., Rust, Go, Python).
 
-# Repository
+## Repository
 
 This research is part of the Performance Benchmarking for Node.js Applications project. Contributions and feedback are welcome!
 
-# References
+## References
 
 [Building a Reliable Node.js Application | Part I](https://blog.platformatic.dev/building-a-reliable-nodejs-application-part-1)
 
