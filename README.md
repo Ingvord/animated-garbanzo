@@ -24,6 +24,8 @@ Scenarios:
 
 Tested against datasets with 1,000, 10,000, 100,000, and 250,000 records.
 
+Fixed number of metadata fields: 100.
+
 Requests Per Second (RPS): 100, 500, 1,000.
 
 Connections: Fixed at 10 (-c 10).
