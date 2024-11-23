@@ -16,9 +16,9 @@ Efficient system design and capacity planning are crucial for ensuring a seamles
 
 Environment:
 
-Application: nginx + 4 SciCat backend instances.
-Database: one instance of MongoDB, filled with generated data.
-Testing Tool: wrk, a modern HTTP benchmarking tool.
+* Application: nginx + 4 SciCat backend instances.
+* Database: one instance of MongoDB, filled with generated data.
+* Testing Tool: wrk, a modern HTTP benchmarking tool.
 
 Scenarios:
 
