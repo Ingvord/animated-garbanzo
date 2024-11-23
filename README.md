@@ -46,13 +46,13 @@ Failed requests (timeouts, errors).
 
 Without Cache:
 
+![](assets/nocache.png)
+
 High latency and increased failures for large datasets (e.g., 10,000+ records).
 
 Performance degraded significantly as RPS increased, especially for datasets over 100,000 records.
 
-Basically system is not usefull:
-
-![](assets/nocache.png)
+Basically the application is not usefull.
 
 With Cache:
 
