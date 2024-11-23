@@ -19,6 +19,9 @@ Environment:
 * Application: nginx + 4 SciCat backend instances.
 * Database: one instance of MongoDB, filled with generated data.
 * Testing Tool: wrk, a modern HTTP benchmarking tool.
+* VM:
+
+  ![](assets/Screenshot_20241123_042708.png)
 
 Scenarios:
 
