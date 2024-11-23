@@ -75,6 +75,8 @@ With Cache:
 
 ![](assets/cache_computaion.png)
 
+The computation times are displayed on a logarithmic scale, and "N/A" is shown where data for 1000 metadata keys is unavailable due to inability to generate datasets.
+
 Dramatic reduction in latency for all dataset sizes.
 
 Near-linear scaling for RPS up to 500 for datasets of 1,000 and 10,000 records.
