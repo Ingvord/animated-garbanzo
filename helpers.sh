@@ -6,7 +6,7 @@ docker run -d \
   --name=mongodb_exporter \
   --network=root_elastic \
   --link mongo:db \
-  percona/mongodb_exporter \ 
+  percona/mongodb_exporter:0.42.0 \ 
   --mongodb.uri="mongodb://db:27017"
 #backend
 docker build -t back .
