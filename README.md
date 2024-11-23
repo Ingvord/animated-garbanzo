@@ -79,6 +79,8 @@ Dramatic reduction in latency for all dataset sizes.
 
 Near-linear scaling for RPS up to 500 for datasets of 1,000 and 10,000 records.
 
+The 99th percentile growth at 1K RPS highlights a significant increase in the tail-end latency. This reflects the system's struggle to handle peak load efficiently, even with caching. It suggests that as the number of requests increases, a small subset of requests experience disproportionately higher delays.
+
 Larger datasets (100,000+ records) showed improved performance but required significant time to precompute the cache i.e. 5+ min.
 
 ![](assets/Screenshot_20241123_042708.png)
