@@ -67,6 +67,8 @@ With Cache:
 
 ![](assets/cache_10K_records.png)
 
+![](assets/cache_1K_meta_10K_records.png)
+
 ![](assets/cache_100K_records.png)
 
 ![](assets/cache_250K_records.png)
