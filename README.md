@@ -1,4 +1,4 @@
-# Research Summary: Node.js API Server Performance with MongoDB and Caching
+# Research Summary: SciCat `metadataTypes` API Endpoint Performance with Caching
 
 ## Overview
 
