@@ -73,7 +73,7 @@ With Cache:
 
 ![](assets/cache_250K_records.png)
 
-![](assets/cach_computaion.png)
+![](assets/cache_computaion.png)
 
 Dramatic reduction in latency for all dataset sizes.
 
