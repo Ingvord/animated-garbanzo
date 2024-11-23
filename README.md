@@ -73,6 +73,15 @@ With Cache:
 
 ![](assets/cache_250K_records.png)
 
+![](assets/deadend.webp)
+
+Could not generate 100K and 250K data sets with 1K metadata keys:
+
+```
+~/scicat# ./generate_scicat_data.py 100000 1000
+Killed
+```
+
 ![](assets/cache_computaion.png)
 
 The computation times are displayed on a logarithmic scale, and "N/A" is shown where data for 1000 metadata keys is unavailable due to inability to generate datasets.
