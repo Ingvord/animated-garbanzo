@@ -14,3 +14,5 @@ docker run --rm -d -p 33000:3000 -e SWAGGER_PATH=/backend/explorer -e MONGODB_UR
 #frontend
 docker build -t front .
 docker run --rm -d -p 8180:80 --network root_elastic --name frontend front
+#dbeaver
+docker run -d --name bobrkurwa --rm -ti -p 8080:8978 -v /opt/cloudbeaver/workspace dbeaver/cloudbeaver:latest
