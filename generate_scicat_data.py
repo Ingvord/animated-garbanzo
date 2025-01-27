@@ -44,9 +44,9 @@ def generate_scientific_metadata(metadata_count):
         })
     return {k: v for d in metadata_fields for k, v in d.items()}
 
-def generate_record(index, metadata_count):
+def generate_record(index, metadata_count, predefined_pid=None):
     return {
-        "_id": f"PID.SAMPLE.PREFIX/{random_string(5)}_{index}",
+        "_id": predefined_pid if predefined_pid else f"PID.SAMPLE.PREFIX/{random_string(5)}_{index}",
         "owner": f"{random.choice(['Oleksandr Yefanov', 'Stephen Collins', 'Doru Constantin'])}",
         "ownerEmail": f"{random_string(5).lower()}@example.com",
         "orcidOfOwner": "0000-0001-8676-" + str(random.randint(1000, 9999)),
@@ -120,7 +120,14 @@ def generate_record(index, metadata_count):
     }
 
 def generate_data(records_count, metadata_count):
-    return [generate_record(i, metadata_count) for i in range(records_count)]
+    data = [generate_record(i, metadata_count) for i in range(records_count)]
+
+    # Insert the predefined record at a random position
+    predefined_pid = "PID.SAMPLE.PREFIX/predefined_12345"
+    predefined_record = generate_record(0, metadata_count, predefined_pid=predefined_pid)
+    data.append(predefined_record)
+
+    return data
 
 def save_data_to_file(data, filename):
     with open(filename, 'w') as f:
@@ -136,6 +143,5 @@ if __name__ == "__main__":
     metadata_count = int(sys.argv[2])
     
     data = generate_data(records_count, metadata_count)
-    filename = f"generated_data_{records_count}_{metadata_count}_metadata.json"
     save_data_to_file(data, "Dataset.json")
-    print(f"Data saved to {filename}")
+    print(f"Data saved to Dataset.json")
