@@ -47,6 +47,7 @@ def generate_scientific_metadata(metadata_count):
 def generate_record(index, metadata_count, predefined_pid=None):
     return {
         "_id": predefined_pid if predefined_pid else f"PID.SAMPLE.PREFIX/{random_string(5)}_{index}",
+        "pid": predefined_pid if predefined_pid else f"PID.SAMPLE.PREFIX/{random_string(5)}_{index}",
         "owner": f"{random.choice(['Oleksandr Yefanov', 'Stephen Collins', 'Doru Constantin'])}",
         "ownerEmail": f"{random_string(5).lower()}@example.com",
         "orcidOfOwner": "0000-0001-8676-" + str(random.randint(1000, 9999)),
