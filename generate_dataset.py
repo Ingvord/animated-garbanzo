@@ -5,7 +5,7 @@ import argparse
 
 def generate_scicat_dataset(metadata_count):
     """Generates a SciCat-compatible dataset record with a specified number of metadata fields."""
-    
+
     dataset = {
         "ownerGroup": "testGroup",
         "accessGroups": ["public"],
@@ -28,14 +28,13 @@ def generate_scicat_dataset(metadata_count):
         "classification": "experiment",
         "license": "CC-BY-4.0",
         "isPublished": False,
-        "techniques": ["X-ray"],
         "sharedWith": [],
         "relationships": [],
         "datasetlifecycle": {},
         "scientificMetadata": {},
         "comment": "Automated dataset generation for ingestion performance testing.",
         "dataQualityMetrics": 95.5,
-        "principalInvestigators": ["Dr. John Smith"],
+        "principalInvestigator": "Dr. John Smith",
         "startTime": datetime.datetime.utcnow().isoformat(),
         "endTime": datetime.datetime.utcnow().isoformat(),
         "creationLocation": "Test Facility",
@@ -48,8 +47,8 @@ def generate_scicat_dataset(metadata_count):
         "jobParameters": {},
         "jobLogData": "Successful ingestion",
         "runNumber": "42",
-        "type": "raw"
-    }
+        "type": "raw"  # Ensuring it's explicitly set as "raw"
+    }    
 
     # Generate metadata fields dynamically
     for i in range(1, metadata_count + 1):
