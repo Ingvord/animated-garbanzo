@@ -18,3 +18,5 @@ docker run --rm -d -p 8180:80 --network root_elastic --name frontend front
 docker run -d --name bobrkurwa --rm -ti -p 8080:8978 -v /opt/cloudbeaver/workspace dbeaver/cloudbeaver:latest
 #wrk
 ./wrk -L -t12 -c100 -d120s -R1000 http://localhost/backend/api/v3/datasets/fullquery?limits=%7B%22skip%22%3A0%2C%22limit%22%3A25%2C%22order%22%3A%22creationTime%3Adesc%22%7D&fields=%7B%22mode%22%3A%7B%7D%2C%22pid%22%3A%22PID.SAMPLE.PREFIX%2Fpredefined_12345%22%7D
+#upload
+./wrk -L -t10 -c10 -s ../animated-garbanzo/upload.lua -d120s -R10 "http://localhost/backend/api/v3/datasets"
