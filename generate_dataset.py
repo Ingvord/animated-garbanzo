@@ -64,7 +64,7 @@ if __name__ == "__main__":
     
     dataset = generate_scicat_dataset(args.metadata_count)
     
-    with open("upload.jsom", "w") as f:
+    with open("upload.json", "w") as f:
         json.dump(dataset, f, indent=4)
 
     print(f"SciCat dataset with {args.metadata_count} metadata fields saved to upload.json")
