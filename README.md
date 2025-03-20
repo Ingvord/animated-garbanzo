@@ -1,5 +1,7 @@
 # Research Summary: SciCat `metadataTypes` API Endpoint Performance with Caching
 
+[![DOI](https://zenodo.org/badge/892709135.svg)](https://doi.org/10.5281/zenodo.15056189)
+
 ## Overview
 
 This research investigates the performance of a SciCat `metadataTypes` API  endpoint backed by MongoDB under various load scenarios. The study evaluates the impact of caching and scaling factors, such as the number of records queried and the request rate (RPS). Key performance metrics include latency percentiles and request throughput. The findings highlight bottlenecks and the effectiveness of caching in enhancing system performance.
