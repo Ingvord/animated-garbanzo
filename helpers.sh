@@ -12,6 +12,16 @@ docker run -d \
 docker build -t back .
 docker run --rm -d -p 33000:3000 -e SWAGGER_PATH=/backend/explorer -e MONGODB_URI=mongodb://db:27017/dacat --link mongo:db --link apm:apm --network root_elastic --name backend back
 docker run --rm -d -p 33000:3000 -e ADMIN_GROUPS="admin,globalaccess" -e SWAGGER_PATH=/backend/explorer -e MONGODB_URI=mongodb://db:27017/dacat -v /home/khokhria/scicat/scicat-backend-next/functionalAccounts.json:/home/node/app/functionalAccounts.json:ro --link mongo:db --link apm:apm --network root_elastic --name backend00 back
+run --rm -d --cap-add=SYS_ADMIN --cap-add=PERFMON --cap-add=SYS_PTRACE \
+    --security-opt apparmor=unconfined --security-opt seccomp=unconfined --pid=host --privileged \
+    --user $(id -u):$(id -g) \
+    -p 33000:3000 \
+    -e ADMIN_GROUPS="admin,globalaccess" -e SWAGGER_PATH=/backend/explorer -e MONGODB_URI=mongodb://db:27017/dacat \
+    -v /home/khokhria/scicat/scicat-backend-next/functionalAccounts.json:/home/node/app/functionalAccounts.json:ro \
+    -v /home/khokhria/animated-garbanzo/profiles:/home/node/app/profiles \
+    --link mongo:db --link apm:apm --network root_elastic --name backend00 \
+    back \
+    0x --output-dir=profiles --silent dist/main.js    
 #frontend
 docker build -t front .
 docker run --rm -d -p 8180:80 --network root_elastic --name frontend front
