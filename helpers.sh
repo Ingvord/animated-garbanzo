@@ -21,7 +21,7 @@ docker run --rm -d --cap-add=SYS_ADMIN --cap-add=PERFMON --cap-add=SYS_PTRACE \
     -v /home/khokhria/animated-garbanzo/profiles:/home/node/app/profiles \
     --link mongo:db --link apm:apm --network root_elastic --name backend00 \
     back \
-    0x --output-dir=profiles --silent dist/main.js    
+    sh -c "0x --output-dir=profiles --silent dist/main.js"
 #frontend
 docker build -t front .
 docker run --rm -d -p 8180:80 --network root_elastic --name frontend front
