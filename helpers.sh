@@ -11,6 +11,7 @@ docker run -d \
 #backend
 docker build -t back .
 docker run --rm -d -p 33000:3000 -e SWAGGER_PATH=/backend/explorer -e MONGODB_URI=mongodb://db:27017/dacat --link mongo:db --link apm:apm --network root_elastic --name backend back
+docker run --rm -d -p 33000:3000 -e ADMIN_GROUPS="admin,globalaccess" -e SWAGGER_PATH=/backend/explorer -e MONGODB_URI=mongodb://db:27017/dacat -v /home/khokhria/scicat/scicat-backend-next/functionalAccounts.json:/home/node/app/functionalAccounts.json:ro --link mongo:db --link apm:apm --network root_elastic --name backend00 back
 #frontend
 docker build -t front .
 docker run --rm -d -p 8180:80 --network root_elastic --name frontend front
