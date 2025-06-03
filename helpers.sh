@@ -16,6 +16,7 @@ docker run --rm -d --cap-add=SYS_ADMIN --cap-add=PERFMON --cap-add=SYS_PTRACE \
     --security-opt apparmor=unconfined --security-opt seccomp=unconfined --pid=host --privileged \
     --user $(id -u):$(id -g) \
     -p 33000:3000 \
+    -e MAX_FILE_UPLOAD_SIZE=100mb \
     -e ADMIN_GROUPS="admin,globalaccess" -e SWAGGER_PATH=/backend/explorer -e MONGODB_URI=mongodb://db:27017/dacat \
     -v /home/khokhria/scicat/scicat-backend-next/functionalAccounts.json:/home/node/app/functionalAccounts.json:ro \
     -v /home/khokhria/animated-garbanzo/profiles:/home/node/app/profiles \
