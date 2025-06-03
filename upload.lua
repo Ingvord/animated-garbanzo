@@ -29,3 +29,10 @@ end
 request = function()
     return wrk.format(nil, nil, nil, body)
 end
+
+response = function(status, headers, body)
+    if status >= 300 then
+        print("Response Status: " .. status)
+        print("Body: " .. body)
+    end
+end
