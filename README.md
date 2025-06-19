@@ -138,6 +138,10 @@ The impact of increasing RPS on latency.
 
 The role of caching in reducing high-latency tail events.
 
+## flamegraphs
+
+[Orgidatablocks 100 files ingestion with wrk -c10 -t10 -r10](profiles/origdatablocks_100_entries_wrk.html)
+
 ## Conclusion
 
 This research underscores the importance of caching for read-heavy workloads, especially when dealing with large datasets. While caching significantly improves performance, the time cost of precomputing the cache for large datasets must be accounted for in deployment strategies. 
