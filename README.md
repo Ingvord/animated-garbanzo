@@ -142,6 +142,9 @@ The role of caching in reducing high-latency tail events.
 
 [Orgidatablocks 100 files ingestion with wrk -c10 -t10 -r10](profiles/origdatablocks_100_entries_wrk.html)
 
+[Orgidatablocks 75K files ingestion with curl](profiles/origdatablocks_75K_entries_curl.html)
+
+
 ## Conclusion
 
 This research underscores the importance of caching for read-heavy workloads, especially when dealing with large datasets. While caching significantly improves performance, the time cost of precomputing the cache for large datasets must be accounted for in deployment strategies. 
