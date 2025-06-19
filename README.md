@@ -144,6 +144,7 @@ The role of caching in reducing high-latency tail events.
 
 [Orgidatablocks 75K files ingestion with curl](profiles/origdatablocks_75K_entries_curl.html)
 
+[Orgidatablocks 75K files ingestion with curl](profiles/origdatablocks_75K_entries_curl_fresh_mongo.html)
 
 ## Conclusion
 
